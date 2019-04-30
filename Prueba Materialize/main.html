@@ -50,8 +50,8 @@
 
       
     <!-- Compiled and minified JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script
+>    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/JavaScript">
 			const sideNav = $('#mobile-nav');
 			M.Sidenav.init(sideNav, {});
@@ -60,6 +60,20 @@
 		    $('.parallax').parallax();
 
 		  });
+
+		  $.ajax({
+		  	type: 'GET',
+				url: 'https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UY/USD/es-ES/?query=Mont',
+				dataType: 'JSON',
+				contentType: 'application/json',
+				headers: { 'X-RapidAPI-Host': 'skyscanner-skyscanner-flight-search-v1.p.rapidapi.com', 'X-RapidAPI-Key' : '1d83611c87msh340e9b8f2680da3p114342jsnd7f8854065fc' },
+				success: function(response){
+					alert(JSON.stringify(response));
+				},
+				error: function(xhr,status,error){
+					alert("Error:" + JSON.stringify(xhr));
+				}
+			});
 
     </script>
     </body>

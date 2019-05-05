@@ -1,5 +1,13 @@
 
+    #main-nav {
+    	height: 94px;
+    }
+
     .parallax-container {
       height: "200px" !important;
     }
-        
+
+    .pointer{
+    	cursor: pointer;
+    }
+   

@@ -18,13 +18,13 @@
 
 
 	<header>
-  <nav>
+  <nav id="main-nav">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center">RIAtravel</a>
       <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="main-nav" class="right hide-on-med-and-down">
-        <li><a href="#" style="line-height:30px;">¿Necesitas ayuda?<i class="material-icons center" style="line-height:unset;">headset_mic</i></a></li>
-        <li><a href="#" style="line-height:30px;">Acceso<i class="material-icons center" style="line-height:unset;">person</i></a></li>
+        <li><a href="#" style="line-height:30px; padding-top: 10px;">¿Necesitas ayuda?<i class="material-icons center" style="line-height:unset;">headset_mic</i></a></li>
+        <li><a href="#" style="line-height:30px; padding-top: 10px;">Acceso<i class="material-icons center" style="line-height:unset;">person</i></a></li>
       </ul>
     </div>
   </nav>
@@ -35,9 +35,22 @@
   	<li><a href="#">Acceso a usuario</a></li>
   </ul>
   </header>
-
-	<div class="parallax-container">
-    <div class="parallax"><img src="img/piriapolis1.jpg"></div>
+  	<div class="row">
+		<div class="parallax-container col s12">
+	    	<div class="parallax"><img src="https://live.staticflickr.com/7888/32797064308_6ca9bf70fd_k.jpg" id="main-image"></div>
+	  	</div>
+	</div>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+      	<div class="col s3"></div>
+        <div class="input-field col s6">
+        	<i class="material-icons prefix grey-text lighten-3 pointer">search</i>
+          <input id="txtDestino" type="text" class="validate">
+          <label for="txtDestino">¿A dónde quieres viajar?</label>
+        </div>
+      </div>
+    </form>
   </div>
   <div class="section white">
     <div class="row container">
@@ -56,13 +69,27 @@
 			const sideNav = $('#mobile-nav');
 			M.Sidenav.init(sideNav, {});
 
-  	  $(document).ready(function(){
-		    $('.parallax').parallax();
+  	  	$(document).ready(function(){
+			$('.parallax').parallax();
 
-		  });
-
-		  $.ajax({
-		  	type: 'GET',
+			$.ajax({
+				method: 'GET',
+				"async": true,
+				"crossDomain": true,
+				url: 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=ce9177f45b2766eadfe2931abd09a4b8&tags=' + 'uruguay' +'&tag_mode=all&sort=relevance&extras=url_k&format=json&nojsoncallback=1',
+				dataType: 'JSON',
+				headers: {},
+				success: function(response) {
+					$('#main-image').attr('src', response.photos.photo[1].url_k);
+				},
+				error: function(xhr,status,error){
+					alert("Error: " + JSON.stringify(xhr));
+				}
+			});
+		});
+/*  	  
+		  	$.ajax({
+		  		type: 'GET',
 				url: 'https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UY/USD/es-ES/?query=Mont',
 				dataType: 'JSON',
 				contentType: 'application/json',
@@ -74,7 +101,7 @@
 					alert("Error:" + JSON.stringify(xhr));
 				}
 			});
-
+*/
     </script>
     </body>
   </html>

@@ -1,13 +1,37 @@
 
-    #main-nav {
-    	height: 94px;
-    }
+#main-nav {
+	height: 94px;
+}
 
-    .parallax-container {
-      height: "200px" !important;
-    }
+.pointer{
+	cursor: pointer;
+}
 
-    .pointer{
-    	cursor: pointer;
-    }
-   
+.carousel {
+	height: 600px !important;
+}
+
+.carousel-item {
+	background-size:100%;
+	background-position-y: center;
+}
+
+.search-container {
+	position: absolute;
+	top: 650px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.search-container #search-input {
+	background: white;
+}
+
+.carousel.carousel-slider .carousel-item {
+	text-shadow: black 1px 0 10px;
+}
+
+.carousel.carousel-slider .carousel-item h2{
+	margin-top: 100px;
+	font-size: 30px !important;
+}

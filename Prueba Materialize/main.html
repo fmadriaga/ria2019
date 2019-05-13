@@ -1,107 +1,90 @@
  <!DOCTYPE html>
-  <html>
-    <head>
-    	<meta charset="UTF-8">
-    	<title>RIA travel</title>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link href="css/styles.css" rel="stylesheet">
-      <!--Import materialize.css-->
-       <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ <html>
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>RIA travel</title>
+ 	<!--Import Google Icon Font-->
+ 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 	<link href="css/styles.css" rel="stylesheet">
+ 	<!--Import materialize.css-->
+ 	<!-- Compiled and minified CSS -->
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+ 	<!--Let browser know website is optimized for mobile-->
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ </head>
 
-    <body>
+ <body>
 
 
-	<header>
-  <nav id="main-nav">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">RIAtravel</a>
-      <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul id="main-nav" class="right hide-on-med-and-down">
-        <li><a href="#" style="line-height:30px; padding-top: 10px;">¿Necesitas ayuda?<i class="material-icons center" style="line-height:unset;">headset_mic</i></a></li>
-        <li><a href="#" style="line-height:30px; padding-top: 10px;">Acceso<i class="material-icons center" style="line-height:unset;">person</i></a></li>
-      </ul>
-    </div>
-  </nav>
-  <ul id="mobile-nav" class="sidenav">
-  	<li><a href="#">Destinos</a></li>
-  	<li><a href="#">Hoteles</a></li>
-  	<li><a href="#">¿Necesitas ayuda?</a></li>
-  	<li><a href="#">Acceso a usuario</a></li>
-  </ul>
-  </header>
-  	<div class="row">
-		<div class="parallax-container col s12">
+ 	<header>
+ 		<nav id="main-nav" class="z-depth-2">
+ 			<div class="nav-wrapper">
+ 				<a href="#" class="brand-logo center">RIAtravel UY</a>
+ 				<a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+ 				<ul id="main-nav" class="right hide-on-med-and-down">
+ 					<li><a href="#" style="line-height:30px; padding-top: 10px;">¿Necesitas ayuda?<i class="material-icons center" style="line-height:unset;">headset_mic</i></a></li>
+ 					<li><a href="#" style="line-height:30px; padding-top: 10px;">Acceso<i class="material-icons center" style="line-height:unset;">person</i></a></li>
+ 				</ul>
+ 			</div>
+ 		</nav>
+ 		<ul id="mobile-nav" class="sidenav">
+ 			<li><a href="#">Destinos</a></li>
+ 			<li><a href="#">Hoteles</a></li>
+ 			<li><a href="#">¿Necesitas ayuda?</a></li>
+ 			<li><a href="#">Acceso a usuario</a></li>
+ 		</ul>
+ 	</header>
+ 	<div class="row">
+<!-- 		<div class="parallax-container col s12">
 	    	<div class="parallax"><img src="https://live.staticflickr.com/7888/32797064308_6ca9bf70fd_k.jpg" id="main-image"></div>
-	  	</div>
+	    </div> -->
+	    <div class="carousel carousel-slider center z-depth-2">
+	    	<div class="carousel-item white-text" href="#one!" style="background-image:url('https://live.staticflickr.com/65535/47767819912_b570f72bbd_k.jpg')">
+	    		<h2 class="destino">Cataratas del Iguazú, Argentina</h2>
+	    		<p id="cataratas" class="white-text">A partir de: <span></span> USD</p>
+	    	</div>
+	    	<div class="carousel-item  white-text" href="#two!" style="background-image:url('https://live.staticflickr.com/65535/32876187627_53fbb486b8_k.jpg')">
+	    		<h2 class="destino">Machu Pichu</h2>
+	    		<p  id="machu-pichu"class="white-text">A partir de: <span></span> USD</p>
+	    	</div>
+	    	<div class="carousel-item green white-text" href="#three!" style="background-image:url('https://live.staticflickr.com/65535/46903699755_da57f97acd_k.jpg')">
+	    		<h2 class="destino">China</h2>
+	    		<p id="china" class="white-text">A partir de: <span></span> USD</p>
+	    	</div>
+	    	<div class="carousel-item blue white-text" href="#four!" style="background-image:url('https://live.staticflickr.com/65535/32876187627_53fbb486b8_k.jpg')">
+	    		<h2 class="destino">Londres</h2>
+	    		<p id="londres" class="white-text">A partir de: <span></span> USD</p>
+	    	</div>
+	    </div>
 	</div>
-  <div class="row">
-    <form class="col s12">
-      <div class="row">
-      	<div class="col s3"></div>
-        <div class="input-field col s6">
-        	<i class="material-icons prefix grey-text lighten-3 pointer">search</i>
-          <input id="txtDestino" type="text" class="validate">
-          <label for="txtDestino">¿A dónde quieres viajar?</label>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="section white">
-    <div class="row container">
-      <h2 class="header">Parallax</h2>
-      <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-    </div>
-  </div>
-  
+	<div class="search-container">
+	<div class="row">
+		<form class="col s12">
+			<div class="row">
+				<div class="col s3"></div>
+				<div  id="search-input"  class="input-field col s6 z-depth-3">
+					<i class="material-icons prefix">search</i>
+					<input type="text" id="autocomplete-input" class="autocomplete">
+					<label for="autocomplete-input">¿A dónde quieres viajar?</label>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+	<div class="section white">
+		<div class="row container">
+			<h2 class="header">Parallax</h2>
+			<p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+		</div>
+	</div>
 
 
-      
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script
->    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script type="text/JavaScript">
-			const sideNav = $('#mobile-nav');
-			M.Sidenav.init(sideNav, {});
 
-  	  	$(document).ready(function(){
-			$('.parallax').parallax();
 
-			$.ajax({
-				method: 'GET',
-				"async": true,
-				"crossDomain": true,
-				url: 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=ce9177f45b2766eadfe2931abd09a4b8&tags=' + 'uruguay' +'&tag_mode=all&sort=relevance&extras=url_k&format=json&nojsoncallback=1',
-				dataType: 'JSON',
-				headers: {},
-				success: function(response) {
-					$('#main-image').attr('src', response.photos.photo[1].url_k);
-				},
-				error: function(xhr,status,error){
-					alert("Error: " + JSON.stringify(xhr));
-				}
-			});
-		});
-/*  	  
-		  	$.ajax({
-		  		type: 'GET',
-				url: 'https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UY/USD/es-ES/?query=Mont',
-				dataType: 'JSON',
-				contentType: 'application/json',
-				headers: { 'X-RapidAPI-Host': 'skyscanner-skyscanner-flight-search-v1.p.rapidapi.com', 'X-RapidAPI-Key' : '1d83611c87msh340e9b8f2680da3p114342jsnd7f8854065fc' },
-				success: function(response){
-					alert(JSON.stringify(response));
-				},
-				error: function(xhr,status,error){
-					alert("Error:" + JSON.stringify(xhr));
-				}
-			});
-*/
-    </script>
-    </body>
-  </html>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script
+		>    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script type="text/JavaScript" src="js/javascript.js"></script>
+</body>
+</html>

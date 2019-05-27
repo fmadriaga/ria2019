@@ -209,7 +209,7 @@ function qs() {
 			success: function(response) {
 				console.log(response.photos.photo[1].url_k);
 				$('#main-image').attr('src', response.photos.photo[1].url_k);
-				$('#destino').append('<b>' + keyword.replace(/%20/g, ' ') + '</b>');
+				$('#destino').append('<b>' + decodeURI(keyword.replace(/%20/g, ' ')) + '</b>');
 			}
 		});
 		console.log(photos);

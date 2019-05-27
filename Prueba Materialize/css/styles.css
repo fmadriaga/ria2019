@@ -54,3 +54,8 @@ section {
 	margin-top: 10px;
 	border-radius: 5px;
 }
+.carousel-item
+{
+  background-size : cover;
+  background-position: center;
+}

@@ -203,12 +203,13 @@ function qs() {
 			method: 'GET',
 			"async": true,
 			"crossDomain": true,
-			url: 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=ce9177f45b2766eadfe2931abd09a4b8&tags=' + keyword + '&extras=url_k&sort=relevance&format=json&nojsoncallback=1',
+			url: 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=ce9177f45b2766eadfe2931abd09a4b8&tags=' + keyword + ',landscape&extras=url_k&sort=relevance&format=json&nojsoncallback=1',
 			dataType: 'JSON',
 			headers: {},
 			success: function(response) {
 				console.log(response.photos.photo[1].url_k);
-				$('#main-image').attr('src', response.photos.photo[0].url_k);
+				$('#main-image').attr('src', response.photos.photo[1].url_k);
+				$('#destino').append('<b>' + keyword.replace(/%20/g, ' ') + '</b>');
 			}
 		});
 		console.log(photos);

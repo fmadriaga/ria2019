@@ -1,6 +1,12 @@
 
 #main-nav {
 	height: 94px;
+	position: absolute;
+	z-index: 1;
+}
+
+#ria-nav {
+	height: 94px;
 }
 
 .pointer{
@@ -18,7 +24,7 @@
 
 .search-container {
 	position: absolute;
-	top: 650px;
+	top: 556px;
 	margin: 0 auto;
 	width: 100%;
 }
@@ -32,6 +38,19 @@
 }
 
 .carousel.carousel-slider .carousel-item h2{
-	margin-top: 100px;
+	margin-top: 150px;
 	font-size: 30px !important;
+}
+
+section {
+	margin-top: 70px;
+}
+
+.card-content {
+	height: 130px;
+}
+
+.card-content span.badge {
+	margin-top: 10px;
+	border-radius: 5px;
 }
